@@ -47,6 +47,59 @@ var printObject = function(obj) {
 	}
 };
 
+var vowels = function(str) {
+	finalVowels = [];
+	vocales = str.split('');
+	for(var i = 0; i < vocales.length; i++) {
+		currentLetr = vocales[i].toUpperCase();
+		if (currentLetr === 'A' || currentLetr === 'E' || currentLetr === 'I' || currentLetr === 'O' || currentLetr === 'U') {
+			finalVowels.push(vocales[i]);
+		}
+	}
+	console.log(finalVowels);
+	return finalVowels;
+}
 
+// var twins = function(arr){
+// 	for(var i = 0; i < arr.length; i+=2) {
+// 		if(arr[i] !== arr[i+1]){
+// 			return false;
+// 		};
+// 	}; return true;
+// };
+
+var twins = function(arr) {
+	var i = 0;
+	var i1 = 1;
+	var isTrue = true;
+
+	while (isTrue === true) {
+		if(arr[i] !== arr[i1]) {
+			isTrue = false;
+			console.log('false');
+			return false;
+		}else{
+			isTrue = true;
+			console.log('true')
+			i +=2;
+			i1 +=2;
+		};
+	}
+	isTrue = false;
+	return true;
+}
+
+var unique = function (arr) {
+	var finalArray = [];
+
+	for (var i = 0; i < arr.length; i++) {
+		var currentString = arr[i];
+
+		if(finalArray.indexOf(currentString) === -1) {
+			finalArray.push(currentString);
+		}
+	};
+	console.log(finalArray);
+};
 
 
